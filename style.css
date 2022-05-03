@@ -1,0 +1,154 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.wrapper {
+  color: white;
+  background: linear-gradient(145deg, #2193b0, #6dd5ed);
+  width: 100%;
+  height: 90vh;
+  max-width: 400px;
+  margin: 20px auto;
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+	overflow: hidden;
+}
+
+.search-bar {
+  width: 50%;
+  margin: 0 auto;
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid white;
+}
+
+.search-icon {
+  margin-right: 5px;
+}
+
+#search-input {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  padding: 3px;
+  background: transparent;
+  height: 20px;
+  color: white;
+}
+
+#search-input::placeholder {
+  color: rgb(206, 206, 206);
+}
+
+.main-section{
+  position: relative;
+}
+
+.info-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
+
+.date-time{
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.date-time span{
+  margin: 0 4px;
+}
+
+.city-name {
+  font-size: 28px;
+  margin-bottom: 4px;
+}
+
+.weather-state {
+  font-size: 20px;
+}
+
+.weather-icon {
+  width: 100px;
+  height: 100px;
+}
+
+.temperature {
+  font-size: 64px;
+  font-weight: lighter;
+  line-height: 1;
+  position: relative;
+}
+
+.temperature::after {
+  content: "o";
+  position: absolute;
+  font-size: 30px;
+}
+
+.additional-section {
+  border-top: 1px solid white;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 20px;
+}
+
+.additional-section .row {
+  margin: 16px 0;
+  display: flex;
+}
+
+.additional-section .item {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  text-align: center;
+}
+
+.additional-section .item .label {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.additional-section .item .value {
+  margin-top: 4px;
+  font-size: 16px;
+}
+
+.switchBtnGroup{
+  position: absolute;
+  bottom: 0;
+	left: 0;
+  right: 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.switchBtnGroup .switchBtn {
+	font-size: 36px;
+	width: 50px;
+	height: 50px;
+	background-color: transparent;
+	border: none;
+	outline: none;
+	color: white;
+	cursor: pointer;
+	-webkit-tap-highlight-color: transparent;
+}
+
+.switchBtnGroup .switchBtn:active{
+	opacity: 0.7;
+}
+
+@media (max-width: 739px) {
+  .wrapper {
+    margin: 0 auto;
+  }
+}
