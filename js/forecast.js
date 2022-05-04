@@ -20,7 +20,7 @@ const Forecast = {
 		this.switchBtnLeft = document.querySelector("#forecast-app #btnLeft")
 		this.switchBtnRight = document.querySelector("#forecast-app #btnRight")
 
-		this.location = localStorage.getItem("location") || "Ho Chi Minh"
+		this.location = localStorage.getItem("location") || undefined
 		this.data = undefined
 		this.forecastData = undefined
 		this.forecastIndex = 0
