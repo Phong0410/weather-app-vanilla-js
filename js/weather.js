@@ -1,14 +1,14 @@
 const Weather = {
 	init() {
-		this.searchElement = document.querySelector("#search-input")
-		this.cityNameElement = document.querySelector(".city-name")
-		this.weatherStateElement = document.querySelector(".weather-state")
-		this.weatherIconElement = document.querySelector(".weather-icon")
-		this.temperatureElement = document.querySelector(".temperature")
-		this.sunriseTimeElement = document.querySelector(".sunrise")
-		this.sunsetTimeElement = document.querySelector(".sunset")
-		this.humidityElement = document.querySelector(".humidity")
-		this.windSpeedElement = document.querySelector(".wind-speed")
+		this.searchElement = document.querySelector("#weather-app .search-input")
+		this.cityNameElement = document.querySelector("#weather-app .city-name")
+		this.weatherStateElement = document.querySelector("#weather-app .weather-state")
+		this.weatherIconElement = document.querySelector("#weather-app .weather-icon")
+		this.temperatureElement = document.querySelector("#weather-app .temperature")
+		this.sunriseTimeElement = document.querySelector("#weather-app .sunrise")
+		this.sunsetTimeElement = document.querySelector("#weather-app .sunset")
+		this.humidityElement = document.querySelector("#weather-app .humidity")
+		this.windSpeedElement = document.querySelector("#weather-app .wind-speed")
 
 		this.location = localStorage.getItem("location") || undefined
 		this.data = undefined
@@ -80,4 +80,4 @@ const Weather = {
 	}
 }
 
-Weather.run()
+export default Weather

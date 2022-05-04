@@ -1,18 +1,24 @@
 const Forecast = {
 	init() {
-		this.searchElement = document.querySelector("#search-input")
-		this.cityNameElement = document.querySelector(".city-name")
-		this.dateElement = document.querySelector("#date")
-		this.timeElement = document.querySelector("#time")
-		this.weatherStateElement = document.querySelector(".weather-state")
-		this.weatherIconElement = document.querySelector(".weather-icon")
-		this.temperatureElement = document.querySelector(".temperature")
-		this.sunriseTimeElement = document.querySelector(".sunrise")
-		this.sunsetTimeElement = document.querySelector(".sunset")
-		this.humidityElement = document.querySelector(".humidity")
-		this.windSpeedElement = document.querySelector(".wind-speed")
-		this.switchBtnLeft = document.querySelector("#btnLeft")
-		this.switchBtnRight = document.querySelector("#btnRight")
+		this.searchElement = document.querySelector("#forecast-app .search-input")
+		this.cityNameElement = document.querySelector("#forecast-app .city-name")
+		this.dateElement = document.querySelector("#forecast-app #date")
+		this.timeElement = document.querySelector("#forecast-app #time")
+		this.weatherStateElement = document.querySelector(
+			"#forecast-app .weather-state"
+		)
+		this.weatherIconElement = document.querySelector(
+			"#forecast-app .weather-icon"
+		)
+		this.temperatureElement = document.querySelector(
+			"#forecast-app .temperature"
+		)
+		this.sunriseTimeElement = document.querySelector("#forecast-app .sunrise")
+		this.sunsetTimeElement = document.querySelector("#forecast-app .sunset")
+		this.humidityElement = document.querySelector("#forecast-app .humidity")
+		this.windSpeedElement = document.querySelector("#forecast-app .wind-speed")
+		this.switchBtnLeft = document.querySelector("#forecast-app #btnLeft")
+		this.switchBtnRight = document.querySelector("#forecast-app #btnRight")
 
 		this.location = localStorage.getItem("location") || "Ho Chi Minh"
 		this.data = undefined
@@ -61,6 +67,8 @@ const Forecast = {
 						alert("Cannot find location!")
 					}
 				})
+
+				this.forecastIndex = 0
 			}
 		})
 
@@ -139,4 +147,4 @@ const Forecast = {
 	}
 }
 
-Forecast.run()
+export default Forecast
